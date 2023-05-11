@@ -1,57 +1,41 @@
+//===================================================================================
+// Name         : ArcadeApp.cpp
+// Author       : René R.
+// Version      :
+// Copyright    : None
+// Description  : Arcade App to play different old school Arcade games made in C++
+//                for learning purposes
+//===================================================================================
+
 #include <iostream>
 
 // 2D-Coordinate class
 class Point2D {
 public:
-    Point2D(int x, int y);
-    Point2D();
+    // Constructor
+    Point2D() : mX(0), mY(0) {}
 
-    void setX(int x);
-    void setY(int y);
-    int getX();
-    int getY();
+    Point2D(int x, int y) : mX(x), mY(y) {}
+
+    // Deconstructor 
+    ~Point2D()
+    {
+        std::cout << "Point2D deconstructor called!";
+    }
+    
+
+    // Set/Get
+    void setX(int x) { mX = x; }
+    void setY(int y) { mY = y; }
+    int getX() { return mX; }
+    int getY() { return mY; }
 
     void display();
-
+    
 private:
     int mX;
     int mY;
 };
-
-// Constructors
-Point2D::Point2D()
-{
-    mX = 0;
-    mY = 0;
-}
-
-Point2D::Point2D(int x, int y)
-{
-    mX = x;
-    mY = y;
-}
-
-// Setter
-void Point2D::setX(int x)
-{
-    mX = x;
-}
-
-void Point2D::setY(int y)
-{
-    mY = y;
-}
-
-// Getter
-int Point2D::getX()
-{
-    return mX;
-}
-
-int Point2D::getY()
-{
-    return mY;
-}
 
 // Display
 void Point2D::display()
@@ -61,4 +45,5 @@ void Point2D::display()
 
 int main(int argc, char* argv[]){
     // Base stuff
+
 }
