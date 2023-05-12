@@ -1,9 +1,6 @@
 #include "Utils.h"
 #include <cmath>
 
-// Tolerance value for float comparison
-static const float EPSILON = 0.0001f;
-
 // Definition of the comparison if two floats are equal(with tolerance)
 bool isEqual(float x, float y)
 {

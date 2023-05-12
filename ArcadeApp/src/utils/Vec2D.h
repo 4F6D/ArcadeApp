@@ -17,8 +17,15 @@ public:
     friend std::ostream& operator<<(std::ostream & consoleOut, const Vec2D& vec);
 
     // Overloaded operators
-    bool operator==(const Vec2D& vec2) const;
-    bool operator!=(const Vec2D& vec2) const;
+    bool operator==(const Vec2D& vec2) const;       // Equal
+    bool operator!=(const Vec2D& vec2) const;       // Not Equal
+    Vec2D operator-() const;                        // Negation
+    Vec2D operator*(float scale) const;             // Multiply with a scalar
+    Vec2D operator/(float scale) const;             // Divide by a scalar
+    Vec2D& operator*=(float scale);                 // Multiply and add
+    Vec2D& operator/=(float scale);                 // Divide and add
+
+    friend Vec2D operator*(float scale, const Vec2D& vec);
     
     
 private:

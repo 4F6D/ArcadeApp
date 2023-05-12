@@ -12,5 +12,7 @@
 
 int main(int argc, char* argv[]){
     // Base stuff
-    
+    Vec2D testVec{3,-8};
+
+    std::cout << -testVec;
 }
