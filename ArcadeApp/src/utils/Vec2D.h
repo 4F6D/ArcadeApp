@@ -14,14 +14,9 @@ public:
     inline float getX() { return mX; }
     inline float getY() { return mY; }
 
-    // Overloaded equals operator
-    bool operator==(const Vec2D& othervec2D)
-    {
-        return mX == othervec2D.mX && mY == othervec2D.mY;
-    }
-
     friend std::ostream& operator<<(std::ostream & consoleOut, const Vec2D& vec);
 
+    // Overloaded operators
     bool operator==(const Vec2D& vec2) const;
     bool operator!=(const Vec2D& vec2) const;
     
